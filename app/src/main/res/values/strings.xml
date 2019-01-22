@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RandomEats</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="distance">Distance</string>
+    <string name="submit">Submit</string>
+
+    <string-array name="distance_array">
+        <item>1 mi.</item>
+        <item>2 mi.</item>
+        <item>5 mi.</item>
+        <item>10 mi.</item>
+        <item>25 mi.</item>
+        <item>50 mi.</item>
+    </string-array>
+</resources>
