@@ -100,16 +100,16 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rating_text_view" />
-
+    <!---->
     <TextView
         android:id="@+id/name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="name_text"
+        android:text="@string/name_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/name_text_view"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -119,8 +119,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="address_text"
+        android:text="@string/address_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/address_text_view"
         app:layout_constraintTop_toBottomOf="@+id/name_text" />
 
@@ -130,8 +131,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="number_text"
+        android:text="@string/number_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/number_text_view"
         app:layout_constraintTop_toBottomOf="@+id/address_text" />
 
@@ -141,8 +143,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="time_text"
+        android:text="@string/time_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/time_text_view"
         app:layout_constraintTop_toBottomOf="@+id/rating_text" />
 
@@ -152,8 +155,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="rating_text"
+        android:text="@string/rating_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/rating_text_view"
         app:layout_constraintTop_toBottomOf="@+id/number_text" />
 
@@ -163,8 +167,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="description_text"
+        android:text="@string/description_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/desc_text_view"
         app:layout_constraintTop_toBottomOf="@+id/time_text" />
 </androidx.constraintlayout.widget.ConstraintLayout>

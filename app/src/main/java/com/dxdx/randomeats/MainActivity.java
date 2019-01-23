@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initSpinner(){
-        //mSpinner = findViewById(R.id.distance_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.distance_array, R.layout.support_simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         mSpinner.setAdapter(adapter);

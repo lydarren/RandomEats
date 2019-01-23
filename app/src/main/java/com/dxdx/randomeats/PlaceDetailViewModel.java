@@ -1,12 +1,26 @@
 package com.dxdx.randomeats;
 
-import android.app.Application;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
+public class PlaceDetailViewModel extends ViewModel {
 
-public class PlaceDetailViewModel extends AndroidViewModel {
-    public PlaceDetailViewModel(@NonNull Application application) {
-        super(application);
+
+    PlaceDetailRepository mRepo;
+    MutableLiveData<Place> mPlace;
+
+    public PlaceDetailViewModel(){
+        mRepo = PlaceDetailRepository.getInstance();
+
     }
+
+    public LiveData<Place> getPlace(){
+        return mPlace;
+    }
+
+    public void getNextPlace(){
+        mPlace = mRepo.getNextPlace();
+    }
+
 }

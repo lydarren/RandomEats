@@ -3,13 +3,19 @@
     <string name="title_activity_maps">Map</string>
     <string name="distance">Distance</string>
     <string name="submit">Submit</string>
+    <string name="name_text">name_text</string>
+    <string name="address_text">address_text</string>
+    <string name="number_text">number_text</string>
+    <string name="time_text">time_text</string>
+    <string name="rating_text">rating_text</string>
+    <string name="description_text">description_text</string>
 
     <string-array name="distance_array">
-        <item>1 mi.</item>
-        <item>2 mi.</item>
-        <item>5 mi.</item>
-        <item>10 mi.</item>
-        <item>25 mi.</item>
-        <item>50 mi.</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
     </string-array>
 </resources>
