@@ -1,6 +1,7 @@
-package com.dxdx.randomeats;
+package com.dxdx.randomeats.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -9,6 +10,10 @@ import butterknife.OnClick;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.dxdx.randomeats.R;
+import com.dxdx.randomeats.models.Result;
+import com.dxdx.randomeats.viewmodels.PlaceDetailViewModel;
 
 public class PlaceDetailActivity extends AppCompatActivity {
 
@@ -35,6 +40,19 @@ public class PlaceDetailActivity extends AppCompatActivity {
 
         mViewModel = ViewModelProviders.of(this).get(PlaceDetailViewModel.class);
 
+        mViewModel.getPlace().observe(this, new Observer<Result>() {
+            @Override
+            public void onChanged(Result result) {
+                if(result != null){
+                    mNameText.setText(result.getName());
+                    mAddressText.setText(result.getFormattedAddress());
+                    mNumberText.setText(result.getFormattedPhoneNumber());
+                    mTimeText.setText(result.getName());
+                    mRatingText.setText(String.valueOf(result.getRating()));
+                    mDescriptionText.setText(result.getTypes().toString());
+                }
+            }
+        });
     }
 
     @OnClick(R.id.next_button)

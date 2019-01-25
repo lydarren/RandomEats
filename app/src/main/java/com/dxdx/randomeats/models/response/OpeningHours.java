@@ -1,4 +1,4 @@
-package com.dxdx.randomeats.models;
+package com.dxdx.randomeats.models.response;
 
 
 import java.util.List;

@@ -1,10 +1,13 @@
 package com.dxdx.randomeats.models;
 
 import java.util.List;
+
+import com.dxdx.randomeats.models.response.Geometry;
+import com.dxdx.randomeats.models.response.OpeningHours;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Place {
+public class Result {
 
     @SerializedName("formatted_address")
     @Expose

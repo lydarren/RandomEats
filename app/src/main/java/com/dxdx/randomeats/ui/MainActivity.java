@@ -1,4 +1,4 @@
-package com.dxdx.randomeats;
+package com.dxdx.randomeats.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
@@ -12,9 +12,11 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.dxdx.randomeats.R;
+
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
+
     public static final String EXTRA_SPINNER = "MainActivity.EXTRA_SPINNER";
 
     @BindView(R.id.distance_spinner)
@@ -30,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     
     @OnClick(R.id.submit_button)
     public void submit_button(View v){
-        Log.d(TAG, "submit_button: ");
         Intent i = new Intent(this, PlaceDetailActivity.class);
         i.putExtra(EXTRA_SPINNER, mSpinner.toString());
         startActivity(i);

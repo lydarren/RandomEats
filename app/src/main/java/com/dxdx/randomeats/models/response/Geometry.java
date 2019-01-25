@@ -1,4 +1,4 @@
-package com.dxdx.randomeats.models;
+package com.dxdx.randomeats.models.response;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

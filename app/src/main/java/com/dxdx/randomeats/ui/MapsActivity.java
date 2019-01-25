@@ -1,9 +1,10 @@
-package com.dxdx.randomeats;
+package com.dxdx.randomeats.ui;
 
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
 
+import com.dxdx.randomeats.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
