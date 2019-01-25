@@ -1,25 +1,23 @@
-package com.dxdx.randomeats;
+package com.dxdx.randomeats.viewmodels;
 
-import android.util.Log;
-
-import com.dxdx.randomeats.models.Place;
+import com.dxdx.randomeats.models.Result;
+import com.dxdx.randomeats.data.repositories.PlaceDetailRepository;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class PlaceDetailViewModel extends ViewModel {
-    private static final String TAG = "PlaceDetailViewModel";
+
     private PlaceDetailRepository mRepo;
-    private MutableLiveData<Place> mPlace;
+    private MutableLiveData<Result> mPlace;
 
     public PlaceDetailViewModel(){
         mRepo = PlaceDetailRepository.getInstance();
         mPlace = mRepo.getRandomPlace();
     }
 
-    public LiveData<Place> getPlace(){
-        Log.d(TAG, "getPlace: ");
+    public LiveData<Result> getPlace(){
         return mPlace;
     }
 

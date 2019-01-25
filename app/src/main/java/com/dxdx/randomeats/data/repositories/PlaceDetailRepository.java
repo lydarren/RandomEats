@@ -1,4 +1,4 @@
-package com.dxdx.randomeats.repositories;
+package com.dxdx.randomeats.data.repositories;
 
 import android.util.Log;
 

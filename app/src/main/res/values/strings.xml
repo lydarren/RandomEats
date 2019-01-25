@@ -3,12 +3,7 @@
     <string name="title_activity_maps">Map</string>
     <string name="distance">Distance</string>
     <string name="submit">Submit</string>
-    <string name="name_text">name_text</string>
-    <string name="address_text">address_text</string>
-    <string name="number_text">number_text</string>
-    <string name="time_text">time_text</string>
-    <string name="rating_text">rating_text</string>
-    <string name="description_text">description_text</string>
+    <string name="metric">meters</string>
 
     <string-array name="distance_array">
         <item>500</item>
