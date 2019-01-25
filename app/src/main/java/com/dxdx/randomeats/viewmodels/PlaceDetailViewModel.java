@@ -17,6 +17,10 @@ public class PlaceDetailViewModel extends ViewModel {
         mPlace = mRepo.getRandomPlace();
     }
 
+    public void initViewModel(String location, String rad){
+        mRepo.populateResultsCache(location, rad);
+    }
+
     public LiveData<Result> getPlace(){
         return mPlace;
     }

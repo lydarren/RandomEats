@@ -28,12 +28,11 @@ public class PlaceDetailRepository {
 
     private PlaceDetailRepository(GooglePlacesAPI api){
         mApi = api;
-        populateResultsCache();
         Log.d(TAG, "PlaceDetailRepository: ");
     }
 
-    private void populateResultsCache(){
-        Call<PlacesResponse> call = mApi.getPlaces("-33.8670522,151.1957362", 2000, "restaurant",
+    public void populateResultsCache(String loc, String radius){
+        Call<PlacesResponse> call = mApi.getPlaces(loc, radius, "restaurant",
                 "food", mKey);
         call.enqueue(new Callback<PlacesResponse>() {
             @Override
@@ -41,6 +40,7 @@ public class PlaceDetailRepository {
                 if (response.isSuccessful()) {
                     PlacesResponse re = response.body();
                     mResults = new ArrayList<>(re.getResults());
+                    getRandomPlace();
                 }
             }
             @Override

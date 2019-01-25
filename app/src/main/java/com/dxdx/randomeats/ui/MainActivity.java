@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
     
     @OnClick(R.id.submit_button)
     public void submit_button(View v){
-        Intent i = new Intent(this, PlaceDetailActivity.class);
-        i.putExtra(EXTRA_SPINNER, mSpinner.toString());
+        Intent i = new Intent(MainActivity.this, PlaceDetailActivity.class);
+        i.putExtra(EXTRA_SPINNER, mSpinner.getSelectedItem().toString());
         startActivity(i);
     }
 

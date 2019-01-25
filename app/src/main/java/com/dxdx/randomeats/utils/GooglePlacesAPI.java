@@ -11,7 +11,7 @@ import retrofit2.http.Query;
 public interface GooglePlacesAPI {
     @GET("nearbysearch/json?")
     Call<PlacesResponse> getPlaces(@Query("location") String latlng,
-                                 @Query("radius") int rad, @Query("type") String type,
+                                 @Query("radius") String rad, @Query("type") String type,
                                  @Query("keyword") String word, @Query("key") String key);
 
     @GET("details/json?")
