@@ -16,6 +16,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.dxdx.randomeats.R;
@@ -33,6 +34,7 @@ public class PlaceDetailActivity extends AppCompatActivity {
     @BindView(R.id.time_text) TextView mTimeText;
     @BindView(R.id.rating_text) TextView mRatingText;
     @BindView(R.id.description_text) TextView mDescriptionText;
+    @BindView(R.id.progress_bar) ProgressBar mProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +85,27 @@ public class PlaceDetailActivity extends AppCompatActivity {
                 }
             }
         });
+        mViewModel.getIsUpdating().observe(this, new Observer<Boolean>() {
+            @Override
+            public void onChanged(Boolean aBoolean) {
+                if(aBoolean){
+                    showProgressBar();
+                }
+                else{
+                    hideProgressBar();
+                }
+            }
+        });
+    }
+
+    private void showProgressBar(){
+        mProgressBar.setVisibility(View.VISIBLE);
+        Log.d(TAG, "PROGRESS BAR VISIBLE");
+    }
+
+    private void hideProgressBar(){
+        mProgressBar.setVisibility(View.GONE);
+        Log.d(TAG, "PROGRESS BAR GONE");
     }
 
     private boolean checkLocationPermissions(){

@@ -11,14 +11,18 @@ public class PlaceDetailViewModel extends ViewModel {
 
     private PlaceDetailRepository mRepo;
     private MutableLiveData<Result> mPlace;
+    private MutableLiveData<Boolean> mIsUpdating;
 
     public PlaceDetailViewModel(){
         mRepo = PlaceDetailRepository.getInstance();
         mPlace = mRepo.getRandomPlace();
+        mIsUpdating = new MutableLiveData<>();
     }
 
     public void initViewModel(String location, String rad){
+        mIsUpdating.setValue(true);
         mRepo.populateResultsCache(location, rad);
+        mIsUpdating.postValue(false);
     }
 
     public LiveData<Result> getPlace(){
@@ -27,5 +31,9 @@ public class PlaceDetailViewModel extends ViewModel {
 
     public void getNextPlace(){
         mRepo.getRandomPlace();
+    }
+
+    public LiveData<Boolean> getIsUpdating(){
+        return mIsUpdating;
     }
 }

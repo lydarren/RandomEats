@@ -58,16 +58,13 @@ public class PlaceDetailRepository {
             @Override
             public void onResponse(Call<PlacesResponse> call, Response<PlacesResponse> response) {
                 if (response.isSuccessful()) {
-                    Log.d("Success", new Gson().toJson(response.body()));
                     PlacesResponse re = response.body();
                     mPlace.setValue(re.getResult());
                 }
-                else
-                    Log.d("unSuccess", new Gson().toJson(response.errorBody()));
             }
             @Override
             public void onFailure(Call<PlacesResponse> call, Throwable t) {
-                Log.d("unSuccess", "Failed to call");
+
             }
         });
     }
