@@ -21,10 +21,10 @@ import retrofit2.Response;
 public class PlaceDetailRepository {
     private static final String TAG = "PlaceDetailRepository";
     private static PlaceDetailRepository mRepo;
-    List<Result> mResults = new ArrayList<>();
-    MutableLiveData<Result> mPlace = new MutableLiveData<>();
-    GooglePlacesAPI mApi;
-    String mKey = BuildConfig.placesKey;
+    private String mKey = BuildConfig.placesKey;
+    private List<Result> mResults = new ArrayList<>();
+    private GooglePlacesAPI mApi;
+    private MutableLiveData<Result> mPlace = new MutableLiveData<>();
 
     private PlaceDetailRepository(GooglePlacesAPI api){
         mApi = api;

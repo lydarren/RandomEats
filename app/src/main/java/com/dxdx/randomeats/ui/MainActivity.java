@@ -19,8 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_SPINNER = "MainActivity.EXTRA_SPINNER";
 
-    @BindView(R.id.distance_spinner)
-    Spinner mSpinner;
+    @BindView(R.id.distance_spinner) Spinner mSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initSpinner(){
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.distance_array, R.layout.support_simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.
+                createFromResource(this, R.array.distance_array,
+                        R.layout.support_simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         mSpinner.setAdapter(adapter);
     }
